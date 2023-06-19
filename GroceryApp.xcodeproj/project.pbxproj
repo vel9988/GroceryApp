@@ -11,6 +11,12 @@
 		EA9210C32A40697300BB6B7B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9210C22A40697300BB6B7B /* ContentView.swift */; };
 		EA9210C52A40697900BB6B7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA9210C42A40697900BB6B7B /* Assets.xcassets */; };
 		EA9210C82A40697900BB6B7B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA9210C72A40697900BB6B7B /* Preview Assets.xcassets */; };
+		EA9210D02A406E3800BB6B7B /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = EA9210CF2A406E3800BB6B7B /* Realm */; };
+		EA9210D22A406E3800BB6B7B /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = EA9210D12A406E3800BB6B7B /* RealmSwift */; };
+		EA9210D52A40745B00BB6B7B /* AddShoppingListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9210D42A40745B00BB6B7B /* AddShoppingListScreen.swift */; };
+		EA9210D82A407A1D00BB6B7B /* ShoppingList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9210D72A407A1D00BB6B7B /* ShoppingList.swift */; };
+		EA9210DA2A408FA400BB6B7B /* ShoppingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9210D92A408FA400BB6B7B /* ShoppingItem.swift */; };
+		EA9210DD2A40919000BB6B7B /* Migrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9210DC2A40919000BB6B7B /* Migrator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +25,10 @@
 		EA9210C22A40697300BB6B7B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EA9210C42A40697900BB6B7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA9210C72A40697900BB6B7B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EA9210D42A40745B00BB6B7B /* AddShoppingListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddShoppingListScreen.swift; sourceTree = "<group>"; };
+		EA9210D72A407A1D00BB6B7B /* ShoppingList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingList.swift; sourceTree = "<group>"; };
+		EA9210D92A408FA400BB6B7B /* ShoppingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingItem.swift; sourceTree = "<group>"; };
+		EA9210DC2A40919000BB6B7B /* Migrator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Migrator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +36,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA9210D22A406E3800BB6B7B /* RealmSwift in Frameworks */,
+				EA9210D02A406E3800BB6B7B /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,7 +64,10 @@
 			isa = PBXGroup;
 			children = (
 				EA9210C02A40697300BB6B7B /* GroceryAppApp.swift */,
+				EA9210D32A40743A00BB6B7B /* Screens */,
 				EA9210C22A40697300BB6B7B /* ContentView.swift */,
+				EA9210D62A4079F600BB6B7B /* Model */,
+				EA9210DB2A40916800BB6B7B /* Utils */,
 				EA9210C42A40697900BB6B7B /* Assets.xcassets */,
 				EA9210C62A40697900BB6B7B /* Preview Content */,
 			);
@@ -65,6 +80,31 @@
 				EA9210C72A40697900BB6B7B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EA9210D32A40743A00BB6B7B /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				EA9210D42A40745B00BB6B7B /* AddShoppingListScreen.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		EA9210D62A4079F600BB6B7B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EA9210D72A407A1D00BB6B7B /* ShoppingList.swift */,
+				EA9210D92A408FA400BB6B7B /* ShoppingItem.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EA9210DB2A40916800BB6B7B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				EA9210DC2A40919000BB6B7B /* Migrator.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +123,10 @@
 			dependencies = (
 			);
 			name = GroceryApp;
+			packageProductDependencies = (
+				EA9210CF2A406E3800BB6B7B /* Realm */,
+				EA9210D12A406E3800BB6B7B /* RealmSwift */,
+			);
 			productName = GroceryApp;
 			productReference = EA9210BD2A40697300BB6B7B /* GroceryApp.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +155,9 @@
 				Base,
 			);
 			mainGroup = EA9210B42A40697300BB6B7B;
+			packageReferences = (
+				EA9210CE2A406E3800BB6B7B /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = EA9210BE2A40697300BB6B7B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,7 +185,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA9210C32A40697300BB6B7B /* ContentView.swift in Sources */,
+				EA9210D82A407A1D00BB6B7B /* ShoppingList.swift in Sources */,
+				EA9210DD2A40919000BB6B7B /* Migrator.swift in Sources */,
 				EA9210C12A40697300BB6B7B /* GroceryAppApp.swift in Sources */,
+				EA9210DA2A408FA400BB6B7B /* ShoppingItem.swift in Sources */,
+				EA9210D52A40745B00BB6B7B /* AddShoppingListScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +390,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EA9210CE2A406E3800BB6B7B /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EA9210CF2A406E3800BB6B7B /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EA9210CE2A406E3800BB6B7B /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		EA9210D12A406E3800BB6B7B /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EA9210CE2A406E3800BB6B7B /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EA9210B52A40697300BB6B7B /* Project object */;
 }
